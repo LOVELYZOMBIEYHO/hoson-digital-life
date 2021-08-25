@@ -1,16 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Staatliches;
+  line-height: 1.8;
+  font-size: 1.2rem;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: steelblue;
 }
 
-* {
-  box-sizing: border-box;
+p {
+  margin: 10px 0;
+}
+
+h1 {
+  font-family: Staatliches;
+  /* 
+  margin-bottom: 20px;
+  margin-top: 10px; */
+}
+
+.btn {
+  display: inline-block;
+  background: red;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  font: inherit;
+  font-size: 13px;
+  background: #000;
+  color: #fff !important;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  opacity: 0.8;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon svg {
+  margin-right: 5px;
+}
+
+.align-center-with-div {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+img {
+  object-fit: cover;
+}
+
+.btnCategoryLabel {
+  font: inherit;
+  font-size: 13px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 0px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: right;
+}
+
+.btnCategoryLabel:hover {
+  opacity: 0.8;
+}
+
+.btnCategoryLabel a {
+  color: #fff !important;
 }

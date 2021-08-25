@@ -11,17 +11,17 @@ import Markdown from "markdown-to-jsx";
 export default function EventPage({ evt }) {
   return (
     <Layout>
-      {/* <Seo evt={evt} /> */}
+      {/* <Seo evt={evt} />
 
       <div className={styles.event}>
-        {/* <div className={styles.image}>
+        <div className={styles.image}>
           <Image
             src={evt.image.url}
             width={2260}
             height={1000}
             alt={evt.title}
           />
-        </div> */}
+        </div>
 
         <hr />
         <div className={styles.emptyBox}></div>
@@ -34,14 +34,14 @@ export default function EventPage({ evt }) {
           <h1>Content:</h1>
         </div>
 
-        <div className={styles.contentBox}>
-          <Markdown options={{ forceBlock: true }}>{evt.content}</Markdown>
-
+        <div className={styles.contentBox}> */}
+      <Markdown options={{ forceBlock: true }}>{evt.content}</Markdown>
+      {/* 
           <Link href="/articles">
             <a className={styles.back}>{"<"}Go Back</a>
           </Link>
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 }

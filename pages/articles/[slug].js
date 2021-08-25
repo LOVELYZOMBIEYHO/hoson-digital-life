@@ -5,29 +5,17 @@ import Layout from "@/components/Layout";
 import { API_URL } from "@/config/index";
 import styles from "@/styles/Slug.module.scss";
 
-// import ReactMarkdown from "react-markdown";
-// import remarkGfm from "remark-gfm";
-
 import Markdown from "markdown-to-jsx";
 import Seo from "@/components/Seo";
 
 export default function EventPage({ evt }) {
-  const deleteEvent = (e) => {
-    console.log("delete");
-  };
-
   return (
     <Layout>
       <Seo evt={evt} />
 
       <div className={styles.event}>
-        {/* <span>
-          {new Date(evt.date).toLocaleDateString("zh-HK")} at {evt.time}
-        </span> */}
-
         <div className={styles.image}>
           <Image
-            // src={`${API_URL}${evt.image.url}`}
             src={evt.image.url}
             width={2260}
             height={1000}
@@ -47,14 +35,6 @@ export default function EventPage({ evt }) {
         </div>
 
         <div className={styles.contentBox}>
-          {/* <ReactMarkdown source={evt.content} escapeHtml={false} /> */}
-          {/* <ReactMarkdown remarkPlugins={[[remarkGfm, { singleTilde: false }]]}>
-          {evt.content}
-        </ReactMarkdown>
-        <ReactMarkdown remarkPlugins={[[remarkGfm, { singleTilde: false }]]}>
-          This ~is not~ strikethrough, but ~~this is~~!
-        </ReactMarkdown>
-        <ReactMarkdown children={evt.content} remarkPlugins={[remarkGfm]} /> */}
           <Markdown options={{ forceBlock: true }}>{evt.content}</Markdown>
 
           <Link href="/articles">
@@ -91,16 +71,3 @@ export async function getStaticProps({ params: { slug } }) {
     },
   };
 }
-
-// ServerSide Rendering
-// export async function getServerSideProps({ query: { slug } }) {
-//   const res = await fetch(`${API_URL}/articles?slug=${slug}`);
-
-//   const events = await res.json();
-
-//   return {
-//     props: {
-//       evt: events[0],
-//     },
-//   };
-// }

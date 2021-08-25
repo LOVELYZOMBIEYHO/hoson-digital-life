@@ -7,7 +7,7 @@ import Showcase from "@/components/Showcase";
 
 import { API_URL } from "@/config/index";
 
-export default function webDevelopment({ articles }) {
+export default function Category({ articles }) {
   return (
     <Layout>
       <div>

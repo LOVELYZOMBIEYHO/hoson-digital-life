@@ -8,7 +8,7 @@ import Seopage from "@/components/Seopage";
 
 import { API_URL } from "@/config/index";
 
-export default function webDevelopment({ articles }) {
+export default function WebDevelopment({ articles }) {
   return (
     <Layout>
       <Seopage />

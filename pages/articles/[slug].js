@@ -24,18 +24,16 @@ export default function EventPage({ evt }) {
         {/* <span>
           {new Date(evt.date).toLocaleDateString("zh-HK")} at {evt.time}
         </span> */}
-        <h1>{evt.name}</h1>
-        {evt.image && (
-          <div className={styles.image}>
-            <Image
-              // src={`${API_URL}${evt.image.url}`}
-              src={evt.image.url}
-              width={2260}
-              height={1000}
-              alt={evt.image.name}
-            />
-          </div>
-        )}
+
+        <div className={styles.image}>
+          <Image
+            // src={`${API_URL}${evt.image.url}`}
+            src={evt.image.url}
+            width={2260}
+            height={1000}
+            alt={evt.image.name}
+          />
+        </div>
 
         <hr />
         <div className={styles.emptyBox}></div>

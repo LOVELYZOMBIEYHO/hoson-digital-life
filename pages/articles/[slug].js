@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 import { API_URL } from "@/config/index";
 import styles from "@/styles/Slug.module.scss";
 
-import Markdown from "markdown-to-jsx";
+// import Markdown from "markdown-to-jsx";
 import Seo from "@/components/Seo";
 
 export default function EventPage({ evt }) {
@@ -35,7 +35,7 @@ export default function EventPage({ evt }) {
         </div>
 
         <div className={styles.contentBox}>
-          <Markdown options={{ forceBlock: true }}>{evt.content}</Markdown>
+          {/* <Markdown options={{ forceBlock: true }}>{evt.content}</Markdown> */}
 
           <Link href="/articles">
             <a className={styles.back}>{"<"}Go Back</a>

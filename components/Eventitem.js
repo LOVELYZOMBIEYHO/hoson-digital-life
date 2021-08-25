@@ -117,6 +117,7 @@ export default function Eventitem({ evt }) {
               src={evt.image ? evt.image.url : "/image/event-default.png"}
               width={670}
               height={400}
+              alt={evt.image.name}
             />
           </a>
         </Link>

@@ -1,17 +1,17 @@
 import { FaPencilAlt, FaTimes } from "react-icons/fa";
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 import Layout from "@/components/Layout";
 import { API_URL } from "@/config/index";
 import styles from "@/styles/Slug.module.scss";
 
 import Markdown from "markdown-to-jsx";
-// import Seo from "@/components/Seo";
+import Seo from "@/components/Seo";
 
 export default function EventPage({ evt }) {
   return (
     <Layout>
-      {/* <Seo evt={evt} />
+      <Seo evt={evt} />
 
       <div className={styles.event}>
         <div className={styles.image}>
@@ -34,40 +34,53 @@ export default function EventPage({ evt }) {
           <h1>Content:</h1>
         </div>
 
-        <div className={styles.contentBox}> */}
-      <Markdown options={{ forceBlock: true }}>{evt.content}</Markdown>
-      {/* 
+        <div className={styles.contentBox}>
+          <Markdown options={{ forceBlock: true }}>{evt.content}</Markdown>
+
           <Link href="/articles">
             <a className={styles.back}>{"<"}Go Back</a>
           </Link>
         </div>
-      </div> */}
+      </div>
     </Layout>
   );
 }
 
-export async function getStaticPaths() {
-  const res = await fetch(`${API_URL}/articles`);
-  const articles = await res.json();
+// export async function getStaticPaths() {
+//   const res = await fetch(`${API_URL}/articles`);
+//   const articles = await res.json();
 
-  const paths = articles.map((evt) => ({
-    params: { slug: evt.slug },
-  }));
+//   const paths = articles.map((evt) => ({
+//     params: { slug: evt.slug },
+//   }));
 
-  return {
-    paths,
-    fallback: true,
-  };
-}
+//   return {
+//     paths,
+//     fallback: true,
+//   };
+// }
 
-export async function getStaticProps({ params: { slug } }) {
+// export async function getStaticProps({ params: { slug } }) {
+//   const res = await fetch(`${API_URL}/articles?slug=${slug}`);
+
+//   const articles = await res.json();
+
+//   return {
+//     props: {
+//       evt: articles[0],
+//     },
+//   };
+// }
+
+//  ServerSide Rendering
+export async function getServerSideProps({ query: { slug } }) {
   const res = await fetch(`${API_URL}/articles?slug=${slug}`);
 
-  const articles = await res.json();
+  const events = await res.json();
 
   return {
     props: {
-      evt: articles[0],
+      evt: events[0],
     },
   };
 }

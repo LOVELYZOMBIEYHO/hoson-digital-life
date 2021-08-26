@@ -83,6 +83,14 @@
   p {
     font-size: 25px;
   }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
 }
 
 .back {
@@ -114,7 +122,9 @@
     position: relative;
     left: calc(50% - 300px);
     top: 0;
-    p {
+    p,
+    ol,
+    ul {
       font-size: 20px;
     }
   }
@@ -124,9 +134,11 @@
   .contentBox {
     width: 300px;
     position: relative;
-    left: calc(50% - 170px);
+    left: calc(50% - 150px);
     top: 0;
-    p {
+    p,
+    ol,
+    ul {
       font-size: 15px;
     }
   }
@@ -134,11 +146,13 @@
 
 @media (max-width: 280px) {
   .contentBox {
-    width: 280px;
+    width: 230px;
     position: relative;
-    left: calc(50% - 130px);
+    left: calc(50% - 110px);
     top: 0;
-    p {
+    p,
+    ol,
+    ul {
       font-size: 14px;
     }
   }

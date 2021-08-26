@@ -9,6 +9,9 @@ import Markdown from "markdown-to-jsx";
 import Seo from "@/components/Seo";
 
 export default function EventPage({ evt }) {
+  const MyParagraph = ({ children, ...props }) => (
+    <div {...props}>{children}</div>
+  );
   return (
     <Layout>
       <Seo evt={evt} />
@@ -46,6 +49,7 @@ export default function EventPage({ evt }) {
   );
 }
 
+//  Can't use staticpath when deploy , need to be reviewed***********
 // export async function getStaticPaths() {
 //   const res = await fetch(`${API_URL}/articles`);
 //   const articles = await res.json();

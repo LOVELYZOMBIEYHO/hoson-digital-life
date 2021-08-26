@@ -40,14 +40,14 @@
 
 .heroTitle {
   position: absolute;
-  font-size: 3vw;
-  left: 26vw;
-  top: 15vw;
+  font-size: 6.5vw;
+  left: 5vw;
+  top: 14vw;
   z-index: 3;
   right: 0;
   bottom: 0;
   height: 4vw;
-  width: 50%;
+  width: 90%;
 }
 
 .heroTitle h1 {
@@ -91,6 +91,21 @@
   ol {
     list-style-type: decimal;
   }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 34px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 30px;
+  }
+  h5 {
+    font-size: 28px;
+  }
 }
 
 .back {
@@ -127,6 +142,21 @@
     ul {
       font-size: 20px;
     }
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 26px;
+    }
+    h4 {
+      font-size: 24px;
+    }
+    h5 {
+      font-size: 22px;
+    }
   }
 }
 
@@ -140,6 +170,9 @@
     ol,
     ul {
       font-size: 15px;
+    }
+    h1 {
+      font-size: 20px;
     }
   }
 }

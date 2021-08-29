@@ -1,5 +1,5 @@
-// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
+
 .event {
   position: relative;
   padding-top: 40px;
@@ -105,6 +105,22 @@
   }
   h5 {
     font-size: 28px;
+  }
+  code {
+    // font: 12px Monaco, "Courier New", "DejaVu Sans Mono",
+    //   "Bitstream Vera Sans Mono", monospace;
+    color: #00a2ff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    background-color: #222121;
+    padding: 0px 3px;
+    display: inline-block;
+    margin: 0px;
   }
 }
 

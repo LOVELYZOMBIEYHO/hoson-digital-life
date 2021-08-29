@@ -106,9 +106,9 @@
   h5 {
     font-size: 28px;
   }
+  pre {
+  }
   code {
-    // font: 12px Monaco, "Courier New", "DejaVu Sans Mono",
-    //   "Bitstream Vera Sans Mono", monospace;
     color: #00a2ff;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -119,8 +119,29 @@
     border: 1px solid #ccc;
     background-color: #222121;
     padding: 0px 3px;
-    display: inline-block;
+    display: block;
     margin: 0px;
+    font-size: 25px;
+    width: 830px;
+    overflow-x: auto;
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 62.5%; /* 8:5 Aspect Ratio */
+  }
+
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 }
 
@@ -173,6 +194,10 @@
     h5 {
       font-size: 22px;
     }
+    code {
+      width: 600px;
+      font-size: 20px;
+    }
   }
 }
 
@@ -184,11 +209,15 @@
     top: 0;
     p,
     ol,
-    ul {
+    ul,
+    code {
       font-size: 15px;
     }
     h1 {
-      font-size: 20px;
+      font-size: 18px;
+    }
+    code {
+      width: 300px;
     }
   }
 }
@@ -201,8 +230,12 @@
     top: 0;
     p,
     ol,
-    ul {
+    ul,
+    code {
       font-size: 14px;
+    }
+    code {
+      width: 230px;
     }
   }
 }

@@ -5,6 +5,7 @@ The following packages is used:
 3. markdown-to-jsx (not react-markdown [because of es6])
 
 
-Url:
-hoson-digital-life.vercel.app
+Url: <br>
+
+https://hoson-digital-life.vercel.app/
 

@@ -26,6 +26,9 @@ h1 {
   margin-bottom: 20px;
   margin-top: 10px; */
 }
+h2 {
+  font-family: Staatliches;
+}
 
 .btn {
   display: inline-block;

@@ -32,7 +32,7 @@ export default function EventPage({ evt }) {
           <h1>{evt.title}</h1>
         </div>
         <div className={styles.categoryBox}>
-          <h1>Tag:</h1>
+          <h2>Tag:</h2>
           <p>{evt.tag}</p>
           <h1>Content:</h1>
         </div>

@@ -29,7 +29,20 @@ h1 {
 h2 {
   font-family: Staatliches;
 }
+/* blog post photo align right and left */
+/* https://stackoverflow.com/questions/255170/markdown-and-image-alignment */
+/* <img src="/flowers.jpeg" class="calloutRight"/> */
+/* <img src="https://cdn.pixabay.com/photo/2015/05/12/09/13/social-media-763731_1280.jpg" class="calloutRight"/> */
+.calloutRight {
+  float: right;
+  max-width: 30%;
+}
+.calloutLeft {
+  float: right;
+  max-width: 30%;
+}
 
+/* -------------------- */
 .btn {
   display: inline-block;
   background: red;

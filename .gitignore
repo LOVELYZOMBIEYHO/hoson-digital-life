@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# ignore update guide
+update_guide_git.md
